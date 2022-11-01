@@ -3,15 +3,15 @@
 </p>
 
 ## Technologies used
-    * HTML
-    * CSS
-    * Bootstrap
-    * Javascript
-    * JQuery
-    * Python
-    * Flask
-    * Jupyter Notebook
-    * MySQL
+* HTML
+* CSS
+* Bootstrap
+* Javascript
+* JQuery
+* Python
+* Flask
+* Jupyter Notebook
+* MySQL
 
 ### How to setup?
 Instructions to set up DiaDisc locally.
