@@ -2,6 +2,8 @@
     <img src="https://user-images.githubusercontent.com/78247889/199315642-f07762bf-c93c-4650-bfa8-1e1f5944541f.png" width="480" height="200">
 </p>
 
+<p align="center">A Machine Learning approach for classification and prediction of Diabetes Mellitus</p>
+
 ## Technologies used
 * HTML
 * CSS
