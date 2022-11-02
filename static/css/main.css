@@ -33,9 +33,9 @@
     font-size: 1rem;
 }
 
-
 .nav-link:hover{
-    text-shadow: 2px 2px 2px #2694d8ad;
+    color: #571d26;
+    font-size: 1.2rem;
 }
 
 .homepage{
@@ -46,10 +46,6 @@
 .welcome{
     font-size: 2rem;
     font-weight: 500;
-}
-
-.btn-outline-danger{
-    color:red;
 }
 
 /*Main Page*/
@@ -181,7 +177,7 @@ body {
 }
 
 .aboutP-heading{
-    color:#54a9de;
+    color:#1d3557;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -194,7 +190,7 @@ body {
 /*About diabetes*/
 
 .aboutD-heading{
-    color:#54a9de;
+    color:#1d3557;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -205,7 +201,7 @@ body {
 }
 
 .aboutP-heading:hover{
-    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #54a9de71, 0 0 30px #54a9de62, 0 0 40px #54a9de5e, 0 0 55px #54a9de5d, 0 0 75px #54a9de70, 2px 2px 2px rgba(206,89,55,0);
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #1d355771, 0 0 30px #1d355762, 0 0 40px #1d35575e, 0 0 55px #1d35575d, 0 0 75px #1d355770, 2px 2px 2px rgba(206,89,55,0);
 }
 
 /*buttons*/
@@ -251,7 +247,7 @@ body {
 .bubbly-button:after {
     display: none;
     bottom: -75%;
-    background-image: radial-gradient(circle, #54a9de 20%, transparent 20%), radial-gradient(circle, #003cff 20%, transparent 20%), radial-gradient(circle, transparent 10%, #0077ff 15%, transparent 20%), radial-gradient(circle, #0f40e0 20%, transparent 20%), radial-gradient(circle, #0084ff 20%, transparent 20%), radial-gradient(circle, #3500c7 20%, transparent 20%), radial-gradient(circle, #0011ff 20%, transparent 20%);
+    background-image: radial-gradient(circle, #1d3557 20%, transparent 20%), radial-gradient(circle, #003cff 20%, transparent 20%), radial-gradient(circle, transparent 10%, #0077ff 15%, transparent 20%), radial-gradient(circle, #0f40e0 20%, transparent 20%), radial-gradient(circle, #0084ff 20%, transparent 20%), radial-gradient(circle, #3500c7 20%, transparent 20%), radial-gradient(circle, #0011ff 20%, transparent 20%);
     background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
 }
 .bubbly-button:active {
@@ -293,19 +289,6 @@ body {
     }
 }
 
-.btn-outline-primary{
-    margin-left: 40px;
-    padding-left: 36px;
-    padding-right: 36px;
-    padding-top: 18px;
-    padding-bottom: 18px;
-}
-
-.aboutD-heading:hover{
-    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #54a9de71, 0 0 30px #54a9de62, 0 0 40px #54a9de5e, 0 0 55px #54a9de5d, 0 0 75px #54a9de70, 2px 2px 2px rgba(206,89,55,0);
-}
-
-
 /*working*/
 .steps{
     color:black;
@@ -324,12 +307,12 @@ body {
 }
 #Use{
      font-family: 'Poppins', sans-serif;
-     color: #54a9de;
+     color: #1d3557;
 }
 .card:hover{
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    border: 7px ridge #54a9de;
+    border: 7px ridge #1d3557;
 border-radius: 5px 5px 5px 5px;
 
 }
@@ -346,7 +329,7 @@ border-radius: 5px 5px 5px 5px;
 .footer
 {
     padding: 5%;
-    background-color: black;
+    background-color: #1d3557;
     color: white;
 }
 .footer .line 
