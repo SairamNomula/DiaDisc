@@ -39,9 +39,9 @@
     font-size: 1rem;
 }
 
-
 .nav-link:hover{
-    text-shadow: 2px 2px 2px #2694d8ad;
+    color: #571d26;
+    font-size: 1.2rem;
 }
 
 .homepage{
@@ -78,8 +78,6 @@ body{
     padding-left: 250px;
     padding-right: 250px;
     padding-bottom: 200px;
-  
-    
 }
 
 .form-control{
@@ -106,7 +104,7 @@ body{
     margin-left: 400px;
     margin-right:-243px ;
     width: 20%;    
-    background-color:#54a9de9a;
+    background-color:#1d3557;
     color:white;
 }
 
