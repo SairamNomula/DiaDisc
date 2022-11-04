@@ -131,13 +131,13 @@
                </div>
                <div class="card-body">
                  <h5 class="steps">Get the reports</h5>
-                 <ul class="list-items">   
-                 <li>Glucose</li>
+                 <ul class="list-items">
+                 <li>BMI</li>
                  <li>Blood pressure</li>
+                 <li>Glucose</li>
+                 <li>Insulin</li>
                  <li>Skin thickness</li>
-                 <li>Insulin</li> 
-                 <li>BMI</li> 
-                 <li>diabetes pedigree function</li>
+                 <li>Diabetes pedigree function</li>
                 </ul>
                  
                </div>
@@ -151,9 +151,9 @@
                <div class="card-body">
                  <h5 class="steps">Enter the details</h5>
                  <ul class="list-items">
-                 <li>Click the check button</li>
+                 <li>Click on predict now button</li>
                  <li>Enter the mentioned details to get a probable result.</li>
-                 <li>Click on predict button</li>
+                 <li>Click submit button</li>
                   <br>
                   <br>
                 </ul>
@@ -172,19 +172,13 @@
                  <li>If the predictor shows a probability of more than 70 % then immediately consult a doctor.</li>
                  <li>If the predictor shows a probability less than 70% then maintain your health. </li>
                  <br>
-
-                </ul>
-                        
+                </ul>  
               </div>
               </div>
             </div>
           </div>
   </section>
 
-    
-        
-        
-        
 
       <div class="container">
         <!-- predictors -->
@@ -200,8 +194,7 @@
             </div>
           </div>
         </div>
-      </div>
-    
+      </div> 
   </div>
 
     
@@ -233,6 +226,8 @@
         </div>
       </div>
     </section>
+
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
@@ -240,6 +235,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script src="/static/JS/aboutDiabetesButton.js"></script>
     <script src = "{{url_for('static', filename = 'JS/aboutDiabetesButton.js')}}" ></script>
-    
   </body>
 </html>
