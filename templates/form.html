@@ -53,48 +53,12 @@
                 </fieldset>
                 <fieldset>
                     Number of Pregnancies:
-                    <input type="text" tabindex="5" required name="pregnancies" id="pregnancies">
-                    <span class="note">Note: If male then enter 0</span>
+                    <input placeholder="If male then enter 0" type="text" tabindex="5" required name="pregnancies" id="pregnancies">
                 </fieldset>
                 <fieldset>
                     BMI(Body Mass Index):
                     <input type="text" step="any" tabindex="10" required name="bmi" id="bmi">
                 </fieldset>
-                <fieldset class="dpf">
-                    Diabetes Pedigree Function:
-                    <br>
-                    <input type="radio" id="high" name="fnc" value=2.2>
-                    <label for="high">2.2</label>
-                    <br>
-                    <input type="radio" id="medium" name="fnc" value=1.2>
-                    <label for="medium">1.2</label>
-                    <br>
-                    <input type="radio" id="low" name="fnc" value=0.4 checked>
-                    <label for="low">0.4</label>
-                    <br>
-                    <span class="note">Note:
-                        <ul>
-                       <li> If someone closely related to you has diabetes (like your father/mother/brother/sister) select 2.2</li>
-                       <li>If someone in your kin has diabetes (like grandparents/uncle/aunt) select 1.2</li>
-                       <li>Otherwise select 0.4</li>
-                    </ul>
-                    </span>
-                </fieldset>
-                <fieldset class="dpf">
-                    Have you ever suffered from covid?
-                    <br>
-                    <input type="radio" id="high" name="covid" value=1>
-                    <label for="high">Yes</label>
-                    <br>
-                    <input type="radio" id="medium" name="covid" value=0>
-                    <label for="medium">No</label>
-                    <br>
-                    
-                    <span class="note">Note:    
-                    This field helps you predict whether you have chances of having black fungus or not.
-                    </span>
-                </fieldset>
-                
                 <fieldset>
                     Glucose Level:
                     <input type="text" step="any" tabindex="6" required name="glucose" id="glucose">
@@ -111,7 +75,26 @@
                     Insulin:
                     <input type="text" step="any" tabindex="9" required name="insulin" id="insulin">
                 </fieldset>
-                
+                <fieldset class="dpf">
+                    Diabetes Pedigree Function:
+                    <br>
+                    <input type="radio" id="high" name="fnc" value=2.2>
+                    <label for="high">2.2</label>
+                    <br>
+                    <input type="radio" id="medium" name="fnc" value=1.2>
+                    <label for="medium">1.2</label>
+                    <br>
+                    <input type="radio" id="low" name="fnc" value=0.4 checked>
+                    <label for="low">0.4</label>
+                    <br>
+                    <span class="note">Note:
+                        <ul>
+                       <li>If a member in your family has diabetes, select 2.2</li>
+                       <li>If someone in your kin has diabetes (grandparents/uncle/aunt), select 1.2</li>
+                       <li>Otherwise select 0.4</li>
+                    </ul>
+                    </span>
+                </fieldset>
 
                 <fieldset data-aos="fade-in">
                     <!--<a href="result.html">-->
