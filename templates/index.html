@@ -89,7 +89,6 @@
           <a target="_blank" href="https://www.who.int/health-topics/diabetes#tab=tab_1">Read more</a>
         </div>
         <div class="col">
-            <br>
           <img src="{{url_for('static',filename = 'media/aboutDiabetes.png')}}" class="rounded mx-auto" alt="pic">
           
         </div>
@@ -100,23 +99,27 @@
 <br>
 <br>
   <!--About project-->
-  <section  id="aboutProject" data-aos="slide-up">
+  <section  id="aboutProject" data-aos="fade-up" data-aos-duration="2000">
     <div class="row">
         <div class="col col-lg-6">
             <img id="aboutProjectImage" src="{{url_for('static',filename = 'media/diadisc.png')}}" class="rounded mx-auto d-block" alt="pic" width=500px>
         </div>
         <div class="col col-lg-6">
-            <h1 class='aboutP-heading'>About DiaDisc</h1> 
+            <h1 class='aboutP-heading'>About DiaDisc</h1>
+            <br>
+            <br>
             <p class='aboutP-para'>Diadisc makes use of an ML model with a flask backend. To figure out the probability of type-2 diabetes, one uses the Diadisc, which is essentially a diabetes predictor. The results are pure predictions that were computed using analysis of the data. Our effort is for anyone who want to double-check their reports or who want to know the risk of contracting this ailment before seeking medical attention.</p>      
             <br>
             <a href="/form">
-            <button class="bubbly-button">Enter Info!</button>
+            <button class="btn btn-primary">Enter Info!</button>
             </a>
         </div>
     </div>
 </section>
 
-
+<br>
+<br>
+<br>
     <!--Working-->
     <section id="working" >
       <h1 id="Use" data-aos="fade-in">How to Use?</h1>
@@ -142,7 +145,7 @@
                </div>
              </div>
             </div>
-           <div class="pcol col-lg-4 col-md-6 col-sm-6" data-aos="fade-up">
+           <div class="pcol col-lg-4 col-md-6 col-sm-6" data-aos="zoom-in">
              <div class="card">
                <div class="card-header">
                  <h3 class="steps">Second Step</h3>
@@ -188,7 +191,7 @@
       <div class="container">
         <!-- predictors -->
         <div class="row predictors" id="predictors">
-          <div class="col col-md-10 col-md-center">
+          <div class="col col-md-10 col-md-center" data-aos="zoom-in">
             <div class="card bg-dark text-white">
               <img src="../static/media/minimal.png" class="card-img" alt="Diabetes-predictor">
               <div class="card-img-overlay pad">

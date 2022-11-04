@@ -124,15 +124,15 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.btn:active {
+/* .btn:active {
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
+} */
 
 .btn-black {
     background-color: #1d3557;
     color: #fff;
-    font-size: 15px;
+    font-size: 16px;
     margin-top: 350px;
 }
 
