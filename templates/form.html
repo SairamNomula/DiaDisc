@@ -26,7 +26,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul id="navComponents" class="navbar-nav ml-auto">
-                <li id="aboutContact" class="nav-item"><a href="#aboutFooter" class="nav-link">Contact Us</a></li>
+                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
             </ul>
         </div>
     </nav>
@@ -34,7 +34,7 @@
     <!-- form  -->
     <br>
     <br>
-    <div class="boxform" data-aos="zoom-out">
+    <div class="boxform" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
         <div class="container">
             <form id="contact" action="/predict" method="POST">
 
@@ -50,6 +50,15 @@
                 <fieldset>
                     Age:
                     <input placeholder="Your Age" type="text" tabindex="4" required name="age" id="Age">
+                </fieldset>
+                <fieldset>
+                    Number of Pregnancies:
+                    <input type="text" tabindex="5" required name="pregnancies" id="pregnancies">
+                    <span class="note">Note: If male then enter 0</span>
+                </fieldset>
+                <fieldset>
+                    BMI(Body Mass Index):
+                    <input type="text" step="any" tabindex="10" required name="bmi" id="bmi">
                 </fieldset>
                 <fieldset class="dpf">
                     Diabetes Pedigree Function:
@@ -85,11 +94,7 @@
                     This field helps you predict whether you have chances of having black fungus or not.
                     </span>
                 </fieldset>
-                <fieldset>
-                    Number of Pregnancies:
-                    <input type="text" tabindex="5" required name="pregnancies" id="pregnancies">
-                    <span class="note">Note: If male then enter 0</span>
-                </fieldset>
+                
                 <fieldset>
                     Glucose Level:
                     <input type="text" step="any" tabindex="6" required name="glucose" id="glucose">
@@ -106,10 +111,7 @@
                     Insulin:
                     <input type="text" step="any" tabindex="9" required name="insulin" id="insulin">
                 </fieldset>
-                <fieldset>
-                    BMI(Body Mass Index):
-                    <input type="text" step="any" tabindex="10" required name="bmi" id="bmi">
-                </fieldset>
+                
 
                 <fieldset data-aos="fade-in">
                     <!--<a href="result.html">-->
