@@ -6,7 +6,12 @@ from flask_mysqldb import MySQL
 import yaml
 import sendgrid
 from sendgrid.helpers.mail import *
-# API KEY = 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
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+PWD = os.getenv('PWD')
+SENDGRID_API_KEY=os.getenv('SENDGRID_API_KEY')
 
 #Initialize the flask App
 app = Flask(__name__)
@@ -91,7 +96,7 @@ def predict():
     prediction = model.predict_proba(final_features)
     print(prediction)
     output = '{0:.{1}f}'.format(10*prediction[0][1],2)
-    predictText = "Greetings from Diadisc\n On the basis of the information provided by you , our predictor has calculated the risk of you getting diabetes. Rating on scale of 10 you have a rating of {}".format(output)
+    predictText = "Greetings from DiaDisc\n On the basis of the information provided by you , our predictor has calculated the risk of you getting diabetes. Rating on scale of 10 you have a rating of {}".format(output)
     if output>str(7) and data9 == str(1):
         content = "As you have suffered from covid earlier, you also have high chances of having Black Fungus as well. We suggest you to get an appointment with a doctor. Our appointment scheduler can help you get an appointment in your city."
     elif output > str(7) and data9 == str(0) :
@@ -102,22 +107,22 @@ def predict():
     # SUBJECT = 'Reg diabetes prediction by Diadisc'
     # TEXT = predictText + "\n" + content + "For further reference visit our webpage " " team"
     # message = 'Subject: {}\n\n{}'.format(SUBJECT, TEXT)
-    #server = smtplib.SMTP("smtp.gmail.com", 587)
-    #server.starttls() # puts the connection to the SMTP server into TLS mode.
-    #server.login("sairamnomula14@gmail.com", "password")
-    #server.sendmail("sairamnomula14@gmail.com", email, message)
+    # server = smtplib.SMTP("smtp.gmail.com", 587)
+    # server.starttls() # puts the connection to the SMTP server into TLS mode.
+    # server.login("diadisc2223@gmail.com", PWD)
+    # server.sendmail("diadisc2223@gmail.com", email, message)
 
-    sg = sendgrid.SendGridAPIClient('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')
-    from_email = Email("diadisc@gmail.com")
+    sg = sendgrid.SendGridAPIClient(SENDGRID_API_KEY)
+    from_email = Email("diadisc2223@gmail.com")
     to_email = To("sairam.nomul00@gmail.com")
     SUBJECT = 'Reg diabetes prediction by Diadisc'
     # content = Content(predictText + "\n" + content)
-    content = Content("Hello")
-    mail = Mail(from_email, to_email, subject, content)
+    Content = content("Hello")
+    mail = Mail(from_email, to_email, subject, Content)
     response = sg.client.mail.send.post(request_body=mail.get())
-    print(response.status_code)
-    print(response.body)
-    print(response.headers)
+    # print(response.status_code)
+    # print(response.body)
+    # print(response.headers)
     
     if output>str(7) and data9 == str(1):
         result_web = "Thank you " + name + " for using our Diabetes predictor."

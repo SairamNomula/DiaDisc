@@ -60,7 +60,8 @@ body {
     background-repeat: no-repeat;
     background-attachment:scroll;
     background-size: contain;
-    background-position-x: 70px;
+    background-position-x: 200px;
+	background-position-y: 1px;
 }
 .container {
 	max-width:400px;
