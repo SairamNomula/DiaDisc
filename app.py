@@ -96,13 +96,21 @@ def predict():
     prediction = model.predict_proba(final_features)
     print(prediction)
     output = '{0:.{1}f}'.format(10*prediction[0][1],2)
-    predictText = "Greetings from DiaDisc\n On the basis of the information provided by you , our predictor has calculated the risk of you getting diabetes. Rating on scale of 10 you have a rating of {}".format(output)
+    predictText = "Hello from DiaDisc\n Our predictor assessed your probability of developing diabetes based on the information you supplied. You have a rating of {} on a scale of 10.".format(output)
     if output>str(7) and data9 == str(1):
-        content = "As you have suffered from covid earlier, you also have high chances of having Black Fungus as well. We suggest you to get an appointment with a doctor. Our appointment scheduler can help you get an appointment in your city."
+        content = "You are more likely to get Black Fungus if you have previously suffered with covid. We recommend that you make an appointment with a doctor. Our appointment planner can assist you in obtaining an appointment in your city."
     elif output > str(7) and data9 == str(0) :
-        content = "We suggest you to get an appointment with a doctor. Our appointment scheduler can help you get an appointment in your city."
+        content = "We recommend that you make an appointment with a doctor. Our appointment planner can assist you in obtaining an appointment in your city."
     else :
-        content = "We suggest you to maintain your health. If in case you want to consult a doctor our appointment scheduler can help you get an appointment in your city."
+        content = "We advise you to take care of your health. If you need to see a doctor, our appointment calendar can help you find one in your area."
+
+    SUBJECT = 'Regarding diabetes prediction by DiaDisc'
+    TEXT = predictText + "\n" + content
+    message = 'Subject: {}\n\n{}'.format(SUBJECT, TEXT)
+    server = smtplib.SMTP("smtp.gmail.com", 587)
+    server.starttls()
+    server.login("Diadictor@gmail.com", "zjyiqqmrkoznqarr")
+    server.sendmail("Diadictor@gmail.com", email, message)
 
     # SUBJECT = 'Reg diabetes prediction by Diadisc'
     # TEXT = predictText + "\n" + content + "For further reference visit our webpage " " team"
@@ -112,34 +120,34 @@ def predict():
     # server.login("diadisc2223@gmail.com", PWD)
     # server.sendmail("diadisc2223@gmail.com", email, message)
 
-    sg = sendgrid.SendGridAPIClient(SENDGRID_API_KEY)
-    from_email = Email("diadisc2223@gmail.com")
-    to_email = To("sairam.nomul00@gmail.com")
-    SUBJECT = 'Reg diabetes prediction by Diadisc'
-    # content = Content(predictText + "\n" + content)
-    Content = content("Hello")
-    mail = Mail(from_email, to_email, subject, Content)
-    response = sg.client.mail.send.post(request_body=mail.get())
+    # sg = sendgrid.SendGridAPIClient(SENDGRID_API_KEY)
+    # from_email = Email("diadisc2223@gmail.com")
+    # to_email = To("sairam.nomul00@gmail.com")
+    # SUBJECT = 'Reg diabetes prediction by Diadisc'
+    # # content = Content(predictText + "\n" + content)
+    # Content = content("Hello")
+    # mail = Mail(from_email, to_email, subject, Content)
+    # response = sg.client.mail.send.post(request_body=mail.get())
     # print(response.status_code)
     # print(response.body)
     # print(response.headers)
     
     if output>str(7) and data9 == str(1):
-        result_web = "Thank you " + name + " for using our Diabetes predictor."
+        result_web = "Thank you " + name + " for using DiaDisc."
         result_web2 = "We predict that the chances of you having diabetes"
         result_web3 = "is {} on the scale of 10.".format(output)
-        result_web4 = "As you have suffered from covid earlier, you also have"
-        result_web5 = "high chances of having Black Fungus as well."
-        result_web6 = "We suggest you to consult a doctor."
+        result_web4 = "You are more likely to get Black Fungus if you have previously suffered with covid."
+        result_web5 = "We recommend that you make an appointment with a doctor."
+        result_web6 = "Our appointment planner can assist you in obtaining an appointment in your city."
     elif output>str(7) and data9 == str(0):
-        result_web = "Thank you " + name + " for using our Diabetes predictor."
+        result_web = "Thank you " + name + " for using DiaDisc."
         result_web2 = "We predict that the chances of you having diabetes"
         result_web3 = "is {} on the scale of 10.".format(output)
-        result_web4 = "We suggest you to consult a doctor."
+        result_web4 = "We recommend you to consult a doctor."
         result_web5 = ""
         result_web6 = ""
     else :
-        result_web = "Thank you " + name + " for using our Diabetes predictor."
+        result_web = "Thank you " + name + " for using DiaDisc."
         result_web2 = "We predict that the chances of you having diabetes"
         result_web3 = "is {} on the scale of 10.".format(output)
         result_web4 = ""
