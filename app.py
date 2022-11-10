@@ -31,13 +31,6 @@ model = pickle.load(open('model.pkl', 'rb'))
 @app.route('/')
 def home():
     return render_template('index.html')
-# @app.route('/', methods=['GET', 'POST'])
-# def home():
-#     if request.method == 'POST':
-#         model.save()
-#         # Failure to return a redirect or render_template
-#     else:
-#         return render_template('index.html')
 
 @app.route('/doctor')
 def doctor():
