@@ -39,30 +39,7 @@ def doctor():
 @app.route('/form')
 def form():
     return render_template('form.html')
-
-@app.route('/community')
-def community():
-    cur = mysql.connection.cursor()
-    resultValue = cur.execute("SELECT * FROM blogs") #returns int of rows in the table
-    if resultValue > 0:
-        blogDetails = cur.fetchall() #all the names and emails would be stored
-        return render_template('community.html', blogDetails = blogDetails )
-    return render_template('community.html')
-
-@app.route('/community/form', methods = ['GET', 'POST'])
-def communityform():
-    if request.method == 'POST':
-        blogDetails = request.form
-        title = blogDetails['title']
-        content = blogDetails['content']
-        cur = mysql.connection.cursor() #To execute query commands
-        cur.execute("INSERT INTO blogs(title, content) VALUES(%s, %s)", (title, content))
-        mysql.connection.commit() #to save changes in db
-        cur.close()
-        return redirect ('/community')
-    return render_template('communityForm.html')
-
-
+    
 #To use the predict button in our web-app
 @app.route('/predict',methods=['POST'])
 def predict():
