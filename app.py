@@ -39,7 +39,7 @@ def doctor():
 @app.route('/form')
 def form():
     return render_template('form.html')
-    
+
 #To use the predict button in our web-app
 @app.route('/predict',methods=['POST'])
 def predict():
@@ -78,15 +78,9 @@ def predict():
     TEXT = predictText + "\n" + content
     message = 'Subject: {}\n\n{}'.format(SUBJECT, TEXT)
     server = smtplib.SMTP("smtp.gmail.com", 587)
-    server.starttls()
+    server.starttls() # puts the connection to the SMTP server into TLS mode.
     server.login("Diadictor@gmail.com", "zjyiqqmrkoznqarr")
     server.sendmail("Diadictor@gmail.com", email, message)
-
-    # SUBJECT = 'Reg diabetes prediction by Diadisc'
-    # TEXT = predictText + "\n" + content + "For further reference visit our webpage " " team"
-    # message = 'Subject: {}\n\n{}'.format(SUBJECT, TEXT)
-    # server = smtplib.SMTP("smtp.gmail.com", 587)
-    # server.starttls() # puts the connection to the SMTP server into TLS mode.
     # server.login("diadisc2223@gmail.com", PWD)
     # server.sendmail("diadisc2223@gmail.com", email, message)
 
