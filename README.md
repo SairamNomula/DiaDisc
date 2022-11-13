@@ -2,7 +2,9 @@
     <img src="https://user-images.githubusercontent.com/78247889/199315642-f07762bf-c93c-4650-bfa8-1e1f5944541f.png" width="520" height="200">
 </p>
 
-<p align="center"><strong>A Machine Learning approach for classification and prediction of Diabetes Mellitus</strong></p>
+# <p align="center"><strong>A Machine Learning approach for classification and prediction of Diabetes Mellitus</strong></p>
+
+### <p>DiaDisc use machine learning to calculate the probability that a person suffers from diabetes. Input from the user is minimal, and the resulting analysis is shown in real time. In addition to this, the DiaDisc app integrates with the practo app to assist users locate a local diabetologist.<p>
 
 ## Technologies used
 * HTML
@@ -13,7 +15,7 @@
 * Python
 * Flask
 * Jupyter Notebook
-* MySQL
+<!-- * MySQL -->
 
 ## Screenshots
 <p>
