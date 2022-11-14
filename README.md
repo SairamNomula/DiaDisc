@@ -4,7 +4,7 @@
 
 # <p align="center"><strong>A Machine Learning approach for classification and prediction of Diabetes Mellitus</strong></p>
 
-### <p>DiaDisc use machine learning to calculate the probability that a person suffers from diabetes. Input from the user is minimal, and the resulting analysis is shown in real time. In addition to this, the DiaDisc app integrates with the practo app to assist users locate a local diabetologist.<p>
+### <p>DiaDisc uses machine learning to calculate the probability that a person suffers from diabetes. Input from the user is minimal, and the resulting analysis is shown in real-time. In addition to this, the DiaDisc app integrates with the Practo app to assist users in locating a local diabetologist.<p>
 
 ## Technologies used
 * HTML
