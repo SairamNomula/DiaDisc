@@ -56,3 +56,5 @@ You must have Python installed in your local system.
   ```sh
   pip install flask_mysqldb
   ```
+
+More features are forthcoming...
