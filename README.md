@@ -52,9 +52,9 @@ You must have Python installed in your local system.
   pip install pyyaml
   ```
 
-* flask_mysqldb
+<!-- * flask_mysqldb
   ```sh
   pip install flask_mysqldb
-  ```
+  ``` -->
 
 ## 🚧 🚧 🚧 More features are forthcoming...
