@@ -47,10 +47,10 @@ You must have Python installed in your local system.
   pip install numpy
   ```
 
-* pyyaml
+<!-- * pyyaml
   ```sh
   pip install pyyaml
-  ```
+  ``` -->
 
 <!-- * flask_mysqldb
   ```sh
