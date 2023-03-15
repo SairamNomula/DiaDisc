@@ -100,7 +100,7 @@ def predict():
         result_web = "Thank you " + name + " for using DiaDisc."
         result_web2 = "We predict that the chances of you having diabetes"
         result_web3 = "is {} on the scale of 10.".format(output)
-        result_web4 = "You are more likely to get Black Fungus if you have previously suffered with covid."
+        result_web4 = ""
         result_web5 = "We recommend that you make an appointment with a doctor."
         result_web6 = "Our appointment planner can assist you in obtaining an appointment in your city."
     elif output>str(7) and data9 == str(0):
