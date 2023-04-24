@@ -81,20 +81,6 @@ def predict():
     server.starttls() # puts the connection to the SMTP server into TLS mode.
     server.login("Diadictor@gmail.com", "zjyiqqmrkoznqarr")
     server.sendmail("Diadictor@gmail.com", email, message)
-    # server.login("diadisc2223@gmail.com", PWD)
-    # server.sendmail("diadisc2223@gmail.com", email, message)
-
-    # sg = sendgrid.SendGridAPIClient(SENDGRID_API_KEY)
-    # from_email = Email("diadisc2223@gmail.com")
-    # to_email = To("sairam.nomul00@gmail.com")
-    # SUBJECT = 'Reg diabetes prediction by Diadisc'
-    # # content = Content(predictText + "\n" + content)
-    # Content = content("Hello")
-    # mail = Mail(from_email, to_email, subject, Content)
-    # response = sg.client.mail.send.post(request_body=mail.get())
-    # print(response.status_code)
-    # print(response.body)
-    # print(response.headers)
     
     if output>str(7) and data9 == str(1):
         result_web = "Thank you " + name + " for using DiaDisc."
