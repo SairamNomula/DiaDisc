@@ -40,6 +40,29 @@ def doctor():
 def form():
     return render_template('form.html')
 
+@app.route('/comm')
+def community():
+    cur = mysql.connection.cursor()
+    resultValue = cur.execute("SELECT * FROM blogs") #returns number of rows in the table
+    if resultValue > 0:
+        blogDetails = cur.fetchall() #all the names and emails would be stored
+        return render_template('comm.html', blogDetails = blogDetails )
+    return render_template('comm.html')
+
+@app.route('/comm/form', methods = ['GET', 'POST'])
+def communityform():
+    if request.method == 'POST':
+        blogDetails = request.form
+        title = blogDetails['title']
+        content = blogDetails['content']
+        cur = mysql.connection.cursor() #To execute query commands
+        cur.execute("INSERT INTO blogs(title, content) VALUES(%s, %s)", (title, content))
+        mysql.connection.commit() #to save changes in db
+        cur.close()
+        return redirect ('/comm')
+    return render_template('commform.html')
+
+
 #To use the predict button in our web-app
 @app.route('/predict',methods=['POST'])
 def predict():
@@ -61,7 +84,7 @@ def predict():
     print(type(data9))
     
     final_features = np.array([[data1, data2, data3, data4, data5, data6, data7, data8]])
-    print(final_features)
+    # print(final_features)
     # final_features = [np.array(int_features)]
     prediction = model.predict_proba(final_features)
     print(prediction)
